@@ -35,7 +35,8 @@ function App() {
 
   return (
     <div className="App">
-      <header className="app-header">
+     <div>
+     <header className="app-header">
         <img src={logo} className="app-logo" alt="Logo" />
         <h1>Chatbot</h1>
       </header>
@@ -59,6 +60,7 @@ function App() {
           <button onClick={handleSend}>Send</button>
         </div>
       </div>
+     </div>
     </div>
   );
 }
