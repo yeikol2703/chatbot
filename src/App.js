@@ -6,14 +6,14 @@ import logo from "./assets/logo.svg";
 function App() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
-
+  const baseURL = "https://chatbot-yv-0103faf0a110.herokuapp.com/api";
   useEffect(() => {
     setMessages([{ text: "¡Bienvenido! Empieza a chatear.", user: false }]);
   }, []);
 
   const handleSend = async () => {
     if (input.trim() !== "") {
-      const response = await axios.post("http://localhost:5000/api/chatbot", {
+      const response = await axios.post(`${baseURL}/chatbot`, {
         question: input,
       });
       setMessages([
